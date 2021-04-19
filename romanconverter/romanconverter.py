@@ -8,8 +8,9 @@ def convert():
     entered = textentry.get()
     #clear output
     output.delete(0.0, END)
-    #make entered uppercase if not already
+    #make entered uppercase, removes spaces if not already
     entered = entered.upper()
+    entered = entered.replace(" ", "")
     #dictionary of roman numerals converted to integers
     toint = {
         "M": 1000,
